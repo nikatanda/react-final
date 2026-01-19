@@ -103,7 +103,6 @@
   align-items: center;
 }
 
-.language-toggle,
 .theme-toggle {
   background: none;
   border: none;
@@ -112,10 +111,47 @@
   padding: $spacing-sm;
   border-radius: $radius-md;
   transition: transform $transition-fast, background-color $transition-fast;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+  color: var(--text-primary);
+  opacity: 0.9;
 
   &:hover {
     transform: scale(1.1);
     background-color: var(--bg-secondary);
+    opacity: 1;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.language-toggle {
+  // Ensure flag emoji is always visible with better contrast
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: $spacing-sm;
+  border-radius: $radius-md;
+  transition: transform $transition-fast, background-color $transition-fast, border-color $transition-fast;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+  color: var(--text-primary);
+  opacity: 1;
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: var(--bg-secondary);
+    border-color: var(--text-secondary);
+    opacity: 1;
   }
 
   &:active {
