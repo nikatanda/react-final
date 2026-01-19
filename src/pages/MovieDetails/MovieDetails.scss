@@ -1,0 +1,263 @@
+@import '../../styles/variables.scss';
+
+.movie-details-page {
+  min-height: calc(100vh - 80px);
+}
+
+.movie-details-hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: $spacing-xxl 0;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: $breakpoint-md) {
+    min-height: auto;
+    padding: $spacing-xl 0;
+  }
+}
+
+.movie-details-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 $spacing-lg;
+  display: flex;
+  gap: $spacing-xl;
+  align-items: flex-start;
+
+  @media (max-width: $breakpoint-md) {
+    flex-direction: column;
+    gap: $spacing-lg;
+    padding: 0 $spacing-md;
+  }
+}
+
+.movie-details-poster {
+  flex-shrink: 0;
+  width: 300px;
+
+  img {
+    width: 100%;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-xl;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    width: 150px;
+  }
+}
+
+.movie-details-info {
+  flex: 1;
+  color: white;
+  animation: slideIn $transition-normal;
+}
+
+.movie-details-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: $spacing-md;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    font-size: 1.5rem;
+  }
+}
+
+.movie-details-tagline {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: $spacing-lg;
+
+  @media (max-width: $breakpoint-sm) {
+    font-size: 1rem;
+  }
+}
+
+.movie-details-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-lg;
+  margin-bottom: $spacing-lg;
+}
+
+.meta-item {
+  display: flex;
+  gap: $spacing-sm;
+  align-items: center;
+}
+
+.meta-label {
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.meta-value {
+  font-weight: bold;
+}
+
+.movie-details-genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-md;
+  align-items: center;
+  margin-bottom: $spacing-lg;
+}
+
+.genres-label {
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.genres-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+}
+
+.genre-tag {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: $spacing-xs $spacing-md;
+  border-radius: $radius-md;
+  font-size: 0.875rem;
+  backdrop-filter: blur(10px);
+}
+
+.movie-details-actions {
+  display: flex;
+  gap: $spacing-md;
+  flex-wrap: wrap;
+  margin-bottom: $spacing-xl;
+}
+
+.favorite-button-large,
+.trailer-button {
+  padding: $spacing-md $spacing-lg;
+  border: none;
+  border-radius: $radius-md;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all $transition-fast;
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+}
+
+.favorite-button-large {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  backdrop-filter: blur(10px);
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+  }
+
+  &.active {
+    background-color: rgba(255, 0, 0, 0.3);
+  }
+}
+
+.trailer-button {
+  background-color: $primary-color;
+  color: white;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+}
+
+.movie-details-overview {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: $spacing-lg;
+  border-radius: $radius-lg;
+  backdrop-filter: blur(10px);
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: $spacing-md;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    opacity: 0.95;
+  }
+}
+
+.cast-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: $spacing-xxl $spacing-lg;
+
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-xl $spacing-md;
+  }
+}
+
+.cast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: $spacing-lg;
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: $spacing-md;
+  }
+}
+
+.cast-card {
+  text-align: center;
+  background-color: var(--bg-secondary);
+  border-radius: $radius-lg;
+  overflow: hidden;
+  transition: transform $transition-fast, box-shadow $transition-fast;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-md;
+  }
+}
+
+.cast-image {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+}
+
+.cast-info {
+  padding: $spacing-md;
+}
+
+.cast-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: $spacing-xs;
+}
+
+.cast-character {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.error-message {
+  text-align: center;
+  padding: $spacing-xxl;
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+}

@@ -1,0 +1,76 @@
+@import '../../styles/variables.scss';
+
+.search-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: $spacing-xl $spacing-lg;
+  min-height: calc(100vh - 80px);
+
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-lg $spacing-md;
+  }
+}
+
+.search-container {
+  margin-bottom: $spacing-xl;
+  animation: fadeIn $transition-normal;
+}
+
+.search-input {
+  width: 100%;
+  padding: $spacing-md $spacing-lg;
+  font-size: 1.125rem;
+  border: 2px solid var(--border-color);
+  border-radius: $radius-lg;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  transition: all $transition-fast;
+
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+    box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+  }
+
+  &::placeholder {
+    color: var(--text-secondary);
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    font-size: 1rem;
+    padding: $spacing-md;
+  }
+}
+
+.results-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: $spacing-lg;
+  color: var(--text-primary);
+  animation: fadeIn $transition-normal;
+}
+
+.search-results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: $spacing-lg;
+  margin-bottom: $spacing-lg;
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: $spacing-md;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: $spacing-sm;
+  }
+}
+
+.no-results {
+  text-align: center;
+  padding: $spacing-xxl;
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+  animation: fadeIn $transition-normal;
+}

@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "home": "Home",
+    "favorites": "Favorites",
+    "search": "Search"
+  },
+  "home": {
+    "title": "Discover Movies",
+    "popular": "Popular Movies",
+    "topRated": "Top Rated",
+    "nowPlaying": "Now Playing",
+    "upcoming": "Upcoming",
+    "loadMore": "Load More"
+  },
+  "movie": {
+    "overview": "Overview",
+    "releaseDate": "Release Date",
+    "rating": "Rating",
+    "genres": "Genres",
+    "runtime": "Runtime",
+    "minutes": "minutes",
+    "addToFavorites": "Add to Favorites",
+    "removeFromFavorites": "Remove from Favorites",
+    "watchTrailer": "Watch Trailer",
+    "cast": "Cast",
+    "similar": "Similar Movies"
+  },
+  "favorites": {
+    "title": "My Favorites",
+    "empty": "No favorites yet. Start adding movies to your favorites!",
+    "remove": "Remove"
+  },
+  "search": {
+    "title": "Search Movies",
+    "placeholder": "Search for movies...",
+    "noResults": "No results found",
+    "results": "Search Results"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "close": "Close"
+  }
+}

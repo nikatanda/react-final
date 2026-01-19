@@ -1,0 +1,124 @@
+@import '../../styles/variables.scss';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: $shadow-sm;
+  transition: background-color $transition-normal, border-color $transition-normal;
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: $spacing-md $spacing-lg;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-lg;
+
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-md;
+    flex-wrap: wrap;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: transform $transition-fast;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .logo-icon {
+    font-size: 2rem;
+  }
+
+  .logo-text {
+    @media (max-width: $breakpoint-sm) {
+      display: none;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  gap: $spacing-lg;
+  flex: 1;
+  justify-content: center;
+
+  @media (max-width: $breakpoint-md) {
+    order: 3;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: $spacing-md;
+  }
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $radius-md;
+  transition: all $transition-fast;
+  position: relative;
+
+  &:hover {
+    color: var(--text-primary);
+    background-color: var(--bg-secondary);
+  }
+
+  &.active {
+    color: $primary-color;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      height: 2px;
+      background-color: $primary-color;
+      border-radius: $radius-sm;
+    }
+  }
+}
+
+.header-controls {
+  display: flex;
+  gap: $spacing-md;
+  align-items: center;
+}
+
+.language-toggle,
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: $spacing-sm;
+  border-radius: $radius-md;
+  transition: transform $transition-fast, background-color $transition-fast;
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: var(--bg-secondary);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
