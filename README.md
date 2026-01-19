@@ -2,7 +2,6 @@
 
 A modern, responsive movie discovery web application built with React, TypeScript, and SASS. Explore thousands of movies, discover new favorites, and manage your watchlist.
 
-![Movie Discovery Platform](https://via.placeholder.com/800x400/141414/FFFFFF?text=Movie+Discovery+Platform)
 
 ## ✨ Features
 
@@ -218,70 +217,6 @@ $accent-color: #ff6b6b;
 2. Add translations following the existing structure
 3. Update `src/i18n/config.ts` to include the new language
 
-## 📸 Screenshots
-
-### Home Page
-
-![Home Page](https://via.placeholder.com/800x600/141414/FFFFFF?text=Home+Page)
-
-### Movie Details
-
-![Movie Details](https://via.placeholder.com/800x600/141414/FFFFFF?text=Movie+Details)
-
-### Favorites
-
-![Favorites](https://via.placeholder.com/800x600/141414/FFFFFF?text=Favorites)
-
-### Search
-
-![Search](https://via.placeholder.com/800x600/141414/FFFFFF?text=Search)
-
-## 🌐 Deployment
-
-See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed deployment instructions.
-
-### Quick Deploy Options
-
-**Netlify:**
-
-- Connect your GitHub repo and deploy automatically
-- Or use: `netlify deploy --prod`
-
-**Vercel:**
-
-- Connect your GitHub repo and deploy automatically
-- Or use: `vercel`
-
-**GitHub Pages:**
-
-- Run: `npm run deploy` (after configuring package.json)
-
-**Important:** Remember to set the `VITE_TMDB_API_KEY` environment variable in your hosting platform's settings!
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 👤 Author
-
-Your Name
-
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
-
-## 🙏 Acknowledgments
-
-- [The Movie Database (TMDB)](https://www.themoviedb.org/) for the API
-- React team for the amazing framework
-- All open-source contributors
-
-## 📞 Support
-
-If you have any questions or issues, please open an issue on GitHub.
 
 ---
 
