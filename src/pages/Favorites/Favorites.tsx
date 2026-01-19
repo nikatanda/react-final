@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { getFavorites, removeFromFavorites, FavoriteMovie } from '../../utils/storage'
+import { getFavorites } from '../../utils/storage'
 import { getMovieDetails, Movie } from '../../services/api'
 import MovieCard from '../../components/MovieCard/MovieCard'
 import { useLanguage } from '../../contexts/LanguageContext'
