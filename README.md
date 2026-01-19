@@ -86,7 +86,7 @@ movie-discovery-platform/
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/movie-discovery-platform.git
+git clone https://github.com/nikatanda/react-final.git
 cd movie-discovery-platform
 ```
 
