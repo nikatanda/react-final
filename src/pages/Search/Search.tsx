@@ -13,7 +13,8 @@ const Search = () => {
   const [hasSearched, setHasSearched] = useState(false)
   const [page, setPage] = useState(1)
   const [totalPages, setTotalPages] = useState(1)
-  const searchTimeoutRef = useRef<NodeJS.Timeout>()
+  // ✅ Use ReturnType<typeof setTimeout> instead of NodeJS.Timeout
+  const searchTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(() => {
     return () => {
